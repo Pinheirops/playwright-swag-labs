@@ -1,6 +1,8 @@
 // @ts-check
 const {test, expect} = require('@playwright/test');
 
-test('acessar pagina', async ({page}) => {
-  await page.goto('https://test-automation-practice.com.br/');
+test('acessar sistena', async ({page}) => {
+  await page.goto('https://www.saucedemo.com/');
+  
+  await expect(page).toHaveTitle('Swag Labs');
 });
