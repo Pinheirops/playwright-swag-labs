@@ -1,7 +1,7 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-test("acesso com credenciais validas", async ({ page }) => {
+test("login com credenciais validas", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
   await expect(page).toHaveTitle("Swag Labs");
   await page.getByPlaceholder("username").fill("standard_user");
