@@ -29,7 +29,7 @@ test("login com credencial invalida", async ({ page }) => {
   );
 });
 
-test("login com campo username vazio", async ({ page }) => {
+test("login sem preencher campo username", async ({ page }) => {
   await page.goto("https://www.saucedemo.com/");
   await page.getByPlaceholder("password").fill("secret_sauce");
   await page.getByRole("button", { name: "Login" }).click();
