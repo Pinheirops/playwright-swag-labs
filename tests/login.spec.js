@@ -46,3 +46,11 @@ test("login sem preencher campo password", async ({ page }) => {
     "Epic sadface: Password is required",
   );
 });
+
+test("login sem preencher username e password", async ({ page }) => {
+  await page.goto("https://www.saucedemo.com/");
+  await page.getByRole("button", { name: "Login" }).click();
+  await expect(page.locator(".error-message-container")).toHaveText(
+    "Epic sadface: Username is required",
+  );
+});
